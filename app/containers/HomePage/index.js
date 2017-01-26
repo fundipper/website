@@ -65,10 +65,11 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
       <MuiThemeProvider muiTheme={muiTheme}>
         <AppBar
           title="Company Name"
+          onLeftIconButtonTouchTap={() => console.log('test')}
         >
           <div>
             <AutoComplete
-              style={{ marginTop: '-2px' }}
+              style={{ marginTop: '0px' }}
               inputStyle={{ color: 'white' }}
               hintStyle={{ color: 'white' }}
               hintText="Search Things"

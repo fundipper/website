@@ -12,6 +12,9 @@
  */
 
 import React from 'react';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+injectTapEventPlugin();
 
 export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
