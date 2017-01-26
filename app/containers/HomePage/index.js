@@ -20,6 +20,7 @@ import {
 } from 'material-ui/styles/colors';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import AutoComplete from 'material-ui/AutoComplete';
 import messages from './messages';
 
 const muiTheme = getMuiTheme({
@@ -45,12 +46,37 @@ const muiTheme = getMuiTheme({
 });
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+  state = {
+    dataSource: [],
+  };
+
+  handleUpdateInput = (value) => {
+    this.setState({
+      dataSource: [
+        value,
+        value + value,
+        value + value + value,
+      ],
+    });
+  };
+
   render() {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <AppBar
           title="Company Name"
-        />
+        >
+          <div>
+            <AutoComplete
+              style={{ marginTop: '-2px' }}
+              inputStyle={{ color: 'white' }}
+              hintStyle={{ color: 'white' }}
+              hintText="Search Things"
+              dataSource={this.state.dataSource}
+              onUpdateInput={this.handleUpdateInput}
+            />
+          </div>
+        </AppBar>
       </MuiThemeProvider>
     );
   }
