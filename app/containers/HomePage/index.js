@@ -88,7 +88,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
             posts={this.props.posts}
           />
           <FlatButton
-            style={{ left: 'calc(50% - 176px)', top: '20px' }}
+            style={{ marginLeft: 'calc(50% - 88px)', top: '20px' }}
             href="https://github.com/fundipper"
           >
             <img
@@ -98,7 +98,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
             />
           </FlatButton>
           <FlatButton
-            style={{ left: 'calc(50% - 176px)', top: '20px' }}
+            style={{ marginleft: 'calc(50% - 176px)', top: '20px' }}
             href="https://www.linkedin.com/in/ian-aspin-a427946a/"
           >
             <img
